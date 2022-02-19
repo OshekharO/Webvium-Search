@@ -42,7 +42,8 @@
       }
       body {
         background: #fff;
-        padding: 0 20px;
+        padding: 0;
+        margin: 0;
         overflow: hidden;
       }
       ::selection {
@@ -81,9 +82,15 @@
       .search-input.active input {
         border-radius: 5px 5px 0 0;
       }
+.top {
+	position: relative;
+	height: 10px;
+	background: linear-gradient(141deg, cyan 0%, rebeccapurple 40%, deeppink 90%);
+}
     </style>
   </head>
   <body>
+    <div class='top'></div>
     <div class="wrapper">
       <img src="https://i.ibb.co/dbcr1MW/images.png" />
       <div class="search-input">
