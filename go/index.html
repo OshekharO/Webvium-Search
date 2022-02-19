@@ -102,20 +102,29 @@ body{
     <div class="wrapper">
       <div class="search-input">
         <a href="" target="_blank" hidden></a>
-        <input type="text" class="searchbar" placeholder="Type to search..">
+        <input type="text" id="searchbar" placeholder="Type to search..">
         <div class="icon"><i class="fas fa-search"></i></div>
       </div>
     </div> 
  <script>
-const form = document.querySelector('form')
-
-form.addEventListener('submit', (event) => {
-    const formData = new FormData(form)
-    const query = formData.get('searchbar')
-    window.open(`https://duckduckgo.com/?q=${query}`)
-    form.reset()
-    event.preventDefault()
-})
+      function search(e) {
+        if (e.keyCode == 13) {
+          var val = document.getElementById("searchbar").value;
+          document.getElementById("searchbar").value = "";
+          switch (val) {
+            case "steam":
+            case " steam":
+              window.location.href = "steam:";
+              break;
+            default:
+              if (val[0] == " ") {
+                window.location.href = "https://duckduckgo.com/?q=" + val.substring(1);
+              } else {
+                window.location.href = "https://duckduckgo.com/?q=" + val;
+              }
+          }
+        }
+      }
 </script> 
 
   </body>
