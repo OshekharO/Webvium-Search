@@ -21,86 +21,37 @@
       type="image/x-icon"
     />
     <title>Webvium - Privacy,simplified</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://rawcdn.githack.com/OshekharO/Webvium-Search/83db20cedd1bba67eab3f273350eabb5239c0db0/go/vstyle.css">
+  <link rel="stylesheet" href="https://rawcdn.githack.com/OshekharO/Webvium-Search/83db20cedd1bba67eab3f273350eabb5239c0db0/go/v1style.css">
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  font-size: 20px;
-}
-*::selection {
-  color: #333333;
-  background: #fff;
-}
-body {
-  background: black;
-}
-#logo {
-  position: relative;
-  height: 35vh;
-  width: 35vw;
-  margin-left: 30vw;
-}
-#box {
-        padding: 0 20px;
-        background: black;
-        width: 100%;
-        border-radius: 5px;
-        position: relative;
-}
-#box input {
-  background-color: #202020;
-  color: #fff;
-  height: 55px;
-  width: 100%;
-  text-align: center;
-  border: none;
-  outline: none;
-  box-shadow: 2px 2px 2px #131313;
-  position: absolute;
-  border-radius: 5px;
-  padding: 0 60px 0 20px;
-  font-size: 18px;
-}
-
-#tag {
-  color: #fff;
-  text-align: center;
-  margin-top: 5px;
-  font-size: 18px;
-  font-weight: normal;
-}
-
+body{ background-color:#202020;}
 </style>
-  </head>
-  <body>
-  <img
-      src="https://duckduckgo.com/assets/logo_homepage.alt.v108.svg"
-      alt="logo"
-      id="logo"
-    />
-    <form id="box">
-      <input
-        type="text"
-        name="search"
-        id="search"
-        placeholder="Search"
-        autocomplete="off"
-        spellcheck="off"
-      />
-<br><hr>
-        <h5 id="tag">
-        Privacy, simplified.
-        </h5>
-    </form>
+</head>
+<body>
+      <div>
+         <img class="mxl" src="https://mrepol742.github.io/images/webvium_transparent_icon.png">
+      </div>
+<br><br><h3 style="text-align: center; color: #FFB200; font-family: 'Balsamiq Sans', cursive; font-size: 17px;">Privacy , Simplified</h3><br><br><br>
+  <div><form method="get"  action="/" _lpchecked="1">
+  <center>
+ <div class="bar">
+<input type="search" class="searchbar" id="searchbar" name="search" placeholder="type to search" autocomplete="off">
+</div>
+<br><br><br><br><br><br><br><br>
+<footer class="footer">
+            <div class="container">
+                <span class="copyright"><a style="text-decoration: none; color: #9C9AB3;" href="/">© 2022 Saksham Shekher</a></span>
+            </div>
+        </footer>
 
     <script>
 const form = document.querySelector('form')
 
 form.addEventListener('submit', (event) => {
     const formData = new FormData(form)
-    const query = formData.get('search')
+    const query = formData.get('searchbar')
     window.open(`https://duckduckgo.com/?q=${query}`)
     form.reset()
     event.preventDefault()
