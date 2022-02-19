@@ -201,6 +201,23 @@ body{
                 var val = document.getElementById("search-field").value;
                 document.getElementById('search-field').value = '';
                 switch (val) {
+                    case "steam":
+                    case " steam":
+                        window.location.href = "steam:";
+                        break;
+                    case "photos":
+                    case " photos":
+                    case "photo":
+                    case " photo":
+                        window.location.href = "https://photos.google.com/";
+                        break;
+                    case "wikipedia":
+                    case " wikipedia":
+                    case "wiki":
+                    case " wiki":
+                        window.location.href = "https://en.wikipedia.org/";
+                        break;
+                    default:
                         if (val[0] == " ") {
                             window.location.href = "https://google.com/search?q=" + val.substring(1);
                         } else {
