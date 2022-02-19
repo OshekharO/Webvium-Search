@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://duckduckgo.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>DuckDuckGo - Privacy,simplified</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+*::selection {
+  color: #333333;
+  background: #fff;
+}
+body {
+  background: #1c1c1c;
+}
+#logo {
+  position: relative;
+  height: 35vh;
+  width: 35vw;
+  margin-left: 30vw;
+}
+#box {
+  position: absolute;
+  margin-left: 35%;
+  top: 250px;
+}
+#box input {
+  padding: 7px;
+  width: 350px;
+  text-align: center;
+  background: #333333;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 2px #131313;
+  color: #fff;
+  position: absolute;
+}
+#box button {
+  padding: 5px;
+  border: none;
+  outline: none;
+  background: none;
+  position: relative;
+  z-index: 5;
+  margin-left: 300px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+#box button i {
+  font-size: 22px;
+  color: #92928c;
+}
+#tag {
+  color: #fff;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: normal;
+}
+#tag a {
+  color: #fff;
+  font-size: 18px;
+}
+
+</style>
+  </head>
+  <body>
+    <img
+      src="https://duckduckgo.com/assets/logo_homepage.alt.v108.svg"
+      alt="logo"
+      id="logo"
+    />
+    <form id="box">
+      <input id="search" type="text" placeholder="Type to search.." name="search" />
+      <button><i class="fas fa-search"></i></button>
+      <h5 id="tag">
+        Privacy, simplified.
+        <a href="http://www.duckduckgo.com" target="blank">Original Site</a>
+      </h5>
+    </form>
+
+    <script>
+const form = document.querySelector('form')
+
+form.addEventListener('submit', (event) => {
+    const formData = new FormData(form)
+    const query = formData.get('search')
+    window.open(`https://duckduckgo.com/?q=${query}`)
+    form.reset()
+    event.preventDefault()
+})
+</script>
+  </body>
+</html>
