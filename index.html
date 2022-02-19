@@ -53,7 +53,7 @@
         max-width: 450px;
         margin: 150px auto;
       }
-      .wrapper .search-input {
+      .wrapper .searchbar {
         padding: 0 20px;
         background: #fff;
         width: 100%;
@@ -66,7 +66,7 @@
         border-radius: 5px;
         position: relative;
       }
-      .search-input input {
+      .searchbar input {
         background-color: #202020;
         color: #fff;
         height: 55px;
@@ -77,7 +77,7 @@
         padding: 0 60px 0 20px;
         font-size: 18px;
       }
-      .search-input.active input {
+      .searchbar.active input {
         border-radius: 5px 5px 0 0;
       }
 .top {
@@ -91,16 +91,16 @@
     <div class='top'></div>
     <div class="wrapper">
       <img src="https://mrepol742.github.io/images/webvium_transparent_icon.png" width="300" height="250"/>
-      <div class="search-input">
+      <div class="searchbar">
         <a href="" target="_blank" hidden></a>
-        <input id="search-field" type="text" placeholder="Type to search.." name="search-field" onkeypress="return search(event)" />
+        <input id="searching" type="text" placeholder="Type to search.." name="searching" onkeypress="return search(event)" />
       </div>
     </div>
     <script>
       function search(e) {
         if (e.keyCode == 13) {
-          var val = document.getElementById("search-field").value;
-          document.getElementById("search-field").value = "";
+          var val = document.getElementById("searching").value;
+          document.getElementById("searching").value = "";
           switch (val) {
             case "steam":
             case " steam":
