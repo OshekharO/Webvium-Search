@@ -192,40 +192,23 @@ body{
     <div class="wrapper">
       <div class="search-input">
         <a href="" target="_blank" hidden></a>
-        <input id="js-search-input" type="text" placeholder="Type to search..">
+        <input id="google-search" type="text" placeholder="Type to search..">
         <input type="submit" style="display: none" onclick="return interpretSearch()">
       </div>
     </div>
     <script>
-    function interpretSearch() {
-    var search = document.getElementById("js-search-input").value.split(" ");
-    var searchTerms = "";
+    document.querySelector(".search-input").addEventListener("submit",()=>{
+	event.preventDefault()
+})
 
-    var keywords = {
-        't': 'https://twitter.com/',
-       'tw': 'https://twitch.tv/',
-        'r': 'https://reddit.com/r/',
-        'y': 'https://youtube.com/results?search_query=',
-        'a': 'https://www.amazon.co.uk/s/url=search-alias%3Daps&field-keywords='
-    };
-
-    searchTerms += keywords[search[0]] == null
-        ? "https://duckduckgo.com/?q=" + search[0] + search[1]
-        : keywords[search[0]] + search[1];
-    
-    for (var i = 2; i < search.length; i++) {
-        searchTerms += "+"+search[i];
-    }
-
-    window.location.href = searchTerms;
-    return false;
-};
-
-document.addEventListener("keyup", (e) => {
-    if (e.keyCode === 13) {
-        search("js-search-input");
-    }
-});
+document.documentElement.addEventListener("keyup",(evt)=>{
+	if (evt.which == 13) {
+		let voiceText = document.querySelector(".google-search").value;
+		if (voiceText.length > 0) {
+            window.location.href = "https://google.com/search?q=" + voiceText;
+		}
+	}
+})
 </script>
     <div class="footer-basic">
         <footer>
