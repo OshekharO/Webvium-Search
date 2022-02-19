@@ -1,0 +1,243 @@
+<!--
+~
+~ Copyright (c) 2022 Saksham Shekher (uncoder.eu.org). All rights reserved.
+~
+~ License under the GNU General Public License, Version 3.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~     https://www.gnu.org/licenses/gpl-3.0.en.html
+~
+~ Unless required by the applicable law or agreed in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="all" />
+    <meta property="og:url" content="/">
+    <meta property="og:local" content="en_US">
+    <meta property="og:site_name" content="Webvium Search - Lightweight, Fast, Material.">
+    <meta property="og:type" content="website">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="apple-touch-icon" href="https://mrepol742.github.io/webvium/favicon.png">
+
+      <link rel="shortcut icon" type="image/x-icon" href="https://mrepol742.github.io/webvium/favicon.png">
+
+    <meta http-equiv="Content-Language" content="en_US" />
+    <title>Webvium Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" integrity="sha512-bSncow0ApIhONbz+pNI52n0trz5fMWbgteHsonaPk42JbunIeM9ee+zTYAUP1eLPky5wP0XZ7MSLAPxKkwnlzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #fff;
+  padding: 0 20px;
+}
+
+::selection{
+  color: #fff;
+  background: #000;
+}
+
+.wrapper{
+  max-width: 450px;
+  margin: 150px auto;
+}
+
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.search-input input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #f2f2f2;
+}
+
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+</style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input id="js-search-input" type="text" placeholder="Type to search..">
+        <input type="submit" style="display: none" onclick="return interpretSearch()">
+      </div>
+    </div>
+    <script>
+function interpretSearch() {
+    var search = document.getElementById("js-search-input").value.split(" ");
+    var searchTerms = "";
+
+    var keywords = {
+        't': 'https://twitter.com/',
+       'tw': 'https://twitch.tv/',
+        'r': 'https://reddit.com/r/',
+        'y': 'https://youtube.com/results?search_query=',
+        'a': 'https://www.amazon.co.uk/s/url=search-alias%3Daps&field-keywords='
+    };
+
+    searchTerms += keywords[search[0]] == null
+        ? "https://duckduckgo.com/?q=" + search[0] + search[1]
+        : keywords[search[0]] + search[1];
+    
+    for (var i = 2; i < search.length; i++) {
+        searchTerms += "+"+search[i];
+    }
+
+    window.location.href = searchTerms;
+    return false;
+};
+</script>
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+            <a href="https://instagram.com/melvinjonesrepol"><i class="icon ion-social-instagram"></i></a>
+            <a href="https://github.com/mrepol742"><i class="icon ion-social-github"></i></a>
+<a href="https://twitter.com/mrepol742"><i class="icon ion-social-twitter"></i></a>
+<a href="https://facebook.com/melvinjonesrepol"><i class="icon ion-social-facebook"></i></a>
+</div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/">Home</a></li>
+                <li class="list-inline-item"><a href="https://mrepol742.github.io/webvium/">About</a></li>
+                <li class="list-inline-item"><a href="https://mrepol742.github.io/webvium/privacypolicy/">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Webvium © 2022</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
