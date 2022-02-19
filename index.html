@@ -18,172 +18,155 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="robots" content="all" />
-    <meta property="og:url" content="/">
-    <meta property="og:local" content="en_US">
-    <meta property="og:site_name" content="Webvium Search - Lightweight, Fast, Material.">
-    <meta property="og:type" content="website">
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="apple-touch-icon" href="https://mrepol742.github.io/webvium/favicon.png">
+    <meta property="og:url" content="/" />
+    <meta property="og:local" content="en_US" />
+    <meta property="og:site_name" content="Webvium Search - Lightweight, Fast, Material." />
+    <meta property="og:type" content="website" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="apple-touch-icon" href="https://mrepol742.github.io/webvium/favicon.png" />
 
-      <link rel="shortcut icon" type="image/x-icon" href="https://mrepol742.github.io/webvium/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://mrepol742.github.io/webvium/favicon.png" />
     <meta http-equiv="Content-Language" content="en_US" />
     <title>Webvium Search</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" integrity="sha512-8Vtie9oRR62i7vkmVUISvuwOeipGv8Jd+Sur/ORKDD5JiLgTGeBSkI3ISOhc730VGvA5VVQPwKIKlmi+zMZ71w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css"
+      integrity="sha512-8Vtie9oRR62i7vkmVUISvuwOeipGv8Jd+Sur/ORKDD5JiLgTGeBSkI3ISOhc730VGvA5VVQPwKIKlmi+zMZ71w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-body{
-  background: #fff;
-  padding: 0 20px;
-}
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
 
-::selection{
-  color: #fff;
-  background: #000;
-}
+      body {
+        background: #fff;
+        padding: 0 20px;
+      }
 
-.wrapper{
-  max-width: 450px;
-  margin: 150px auto;
-}
+      ::selection {
+        color: #fff;
+        background: #000;
+      }
 
-.wrapper .search-input{
-  background: #fff;
-  width: 100%;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
-}
+      .wrapper {
+        max-width: 450px;
+        margin: 150px auto;
+      }
 
-.wrapper img{
-  background: #fff;
-  width: 100%;
-  border-radius: 5px;
-  position: relative;
-}
+      .wrapper .search-input {
+        background: #fff;
+        width: 100%;
+        border-radius: 5px;
+        position: relative;
+        box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+      }
 
-.search-input input{
-  background-color: #202020;
-  color: #fff;
-  height: 55px;
-  width: 100%;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  padding: 0 60px 0 20px;
-  font-size: 18px;
-  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
-}
+      .wrapper img {
+        background: #fff;
+        width: 100%;
+        border-radius: 5px;
+        position: relative;
+      }
 
-.search-input.active input{
-  border-radius: 5px 5px 0 0;
-}
+      .search-input input {
+        background-color: #202020;
+        color: #fff;
+        height: 55px;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        padding: 0 60px 0 20px;
+        font-size: 18px;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+      }
 
-.obj {
-    opacity: 0;
-    transform: translateY(10%);
-    transition: all 1s ease;
-}
+      .search-input.active input {
+        border-radius: 5px 5px 0 0;
+      }
 
-.obj.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+      .obj {
+        opacity: 0;
+        transform: translateY(10%);
+        transition: all 1s ease;
+      }
 
-.text-center {
-  padding-top: 10%;
-}
+      .obj.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-section.main {
-    margin-top: 7%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 5% !important;
-}
+      .text-center {
+        padding-top: 10%;
+      }
 
-@media (max-width:1080px) {
-    section.main {
-        margin: 4%;
-        margin-top: 20% !important;
-        margin-bottom: 20% !important;
-    }
-}
+      section.main {
+        margin-top: 7%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 5% !important;
+      }
 
-</style>
-
+      @media (max-width: 1080px) {
+        section.main {
+          margin: 4%;
+          margin-top: 20% !important;
+          margin-bottom: 20% !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
-     <img src="https://i.ibb.co/dbcr1MW/images.png">
+      <img src="https://i.ibb.co/dbcr1MW/images.png" />
       <div class="search-input">
         <a href="" target="_blank" hidden></a>
         <input id="search-field" type="text" placeholder="Type to search.." name="search-field" onkeypress="return search(event)" />
       </div>
     </div>
     <script>
-        function search(e) {
-            if (e.keyCode == 13) {
-                var val = document.getElementById("search-field").value;
-                document.getElementById('search-field').value = '';
-                switch (val) {
-                    case "steam":
-                    case " steam":
-                        window.location.href = "steam:";
-                        break;
-                    case "photos":
-                    case " photos":
-                    case "photo":
-                    case " photo":
-                        window.location.href = "https://photos.google.com/";
-                        break;
-                    case "wikipedia":
-                    case " wikipedia":
-                    case "wiki":
-                    case " wiki":
-                        window.location.href = "https://en.wikipedia.org/";
-                        break;
-                    default:
-                        if (val[0] == " ") {
-                            window.location.href = "https://duckduckgo.com/?q=" + val.substring(1);
-                        } else {
-                            window.location.href = "https://duckduckgo.com/?q=" + val;
-                        }
-                }
-            }
+      function search(e) {
+        if (e.keyCode == 13) {
+          var val = document.getElementById("search-field").value;
+          document.getElementById("search-field").value = "";
+          switch (val) {
+            case "steam":
+            case " steam":
+              window.location.href = "steam:";
+              break;
+            case "photos":
+            case " photos":
+            case "photo":
+            case " photo":
+              window.location.href = "https://photos.google.com/";
+              break;
+            case "wikipedia":
+            case " wikipedia":
+            case "wiki":
+            case " wiki":
+              window.location.href = "https://en.wikipedia.org/";
+              break;
+            default:
+              if (val[0] == " ") {
+                window.location.href = "https://duckduckgo.com/?q=" + val.substring(1);
+              } else {
+                window.location.href = "https://duckduckgo.com/?q=" + val;
+              }
+          }
         }
-</script>
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <section class="main">
-        <article>
-            <div class="text-center obj">
-                <footer class="footer">
-                    <strong>Created with 💝 Saksham Shekher</strong><br><br><br>
-                    <a href="https://facebook.com/melvinjonesrepol" target="_blank" class="fa fa-facebook"></a>
-                    <a href="https://instagram.com/melvinjonesrepol" target="_blank" class="fa fa-instagram"></a>
-                    <a href="https://pinterest.com/mrepol742" target="_blank" class="fa fa-pinterest"></a>
-                    <a href="https://twitter.com/mrepol742" target="_blank" class="fa fa-twitter"></a>
-                    <a href="https://github.com/mrepol742" target="_blank" class="fa fa-github"></a>
-                    <a href="https://linkedin.com/in/mrepol742" target="_blank" class="fa fa-linkedin"></a>
-                    <a href="https://www.youtube.com/channel/UCDYRUXJ8Qldrvb00q9t2KDA" target="_blank"
-                        class="fa fa-youtube"></a><br>
-                    <br><span>&copy; 2022 Melvin Jones Repol.</span>
-
-                </footer>
-            </div>
-        </article>
-    </section>
   </body>
 </html>
