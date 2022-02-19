@@ -27,26 +27,25 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  font-size: 20px;
 }
 *::selection {
   color: #333333;
   background: #fff;
 }
 body {
-  background: orange;
+  background: #1c1c1c;
 }
 #logo {
   position: relative;
-  height: 35vw;
+  height: 35vh;
   width: 35vw;
   margin-left: 30vw;
 }
 #box {
-        padding: 0 20px;
-        background: orange;
-        width: 100%;
-        border-radius: 5px;
-        position: relative;
+  position: absolute;
+  margin-left: 35%;
+  top: 250px;
 }
 #box input {
   padding: 7px;
@@ -59,6 +58,21 @@ body {
   color: #fff;
   position: absolute;
 }
+#box button {
+  padding: 5px;
+  border: none;
+  outline: none;
+  background: none;
+  position: relative;
+  z-index: 5;
+  margin-left: 300px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+#box button i {
+  font-size: 22px;
+  color: #92928c;
+}
 #tag {
   color: #fff;
   text-align: center;
@@ -66,18 +80,31 @@ body {
   font-size: 18px;
   font-weight: normal;
 }
+#tag a {
+  color: #fff;
+  font-size: 18px;
+}
 
 </style>
   </head>
   <body>
-    <img src="https://duckduckgo.com/assets/logo_homepage.alt.v108.svg" id="logo" />
- 
-   <form id="box">
-      <input id="search" type="text" placeholder="Type to search.." name="search" />
-<br>
-      <h5 id="tag">
+  <img
+      src="https://duckduckgo.com/assets/logo_homepage.alt.v108.svg"
+      alt="logo"
+      id="logo"
+    />
+    <form id="box">
+      <input
+        type="text"
+        name="search"
+        id="search"
+        placeholder="Search"
+        autocomplete="off"
+        spellcheck="off"
+      />
+        <h5 id="tag">
         Privacy, simplified.
-      </h5>
+        </h5>
     </form>
 
     <script>
