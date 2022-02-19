@@ -192,23 +192,41 @@ body{
     <div class="wrapper">
       <div class="search-input">
         <a href="" target="_blank" hidden></a>
-        <input id="google-search" type="text" placeholder="Type to search..">
+        <input id="search-field" type="text" placeholder="Type to search.." name="search-field">
         <input type="submit" style="display: none" onclick="return interpretSearch()">
       </div>
     </div>
     <script>
-    document.querySelector("search-input").addEventListener("submit",()=>{
-	event.preventDefault()
-})
-
-document.documentElement.addEventListener("keyup",(evt)=>{
-	if (evt.which == 13) {
-		let voiceText = document.querySelector("google-search").value;
-		if (voiceText.length > 0) {
-            window.location.href = "https://google.com/search?q=" + voiceText;
-		}
-	}
-})
+        function search(e) {
+            if (e.keyCode == 13) {
+                var val = document.getElementById("search-field").value;
+                document.getElementById('search-field').value = '';
+                switch (val) {
+                    case "steam":
+                    case " steam":
+                        window.location.href = "steam:";
+                        break;
+                    case "photos":
+                    case " photos":
+                    case "photo":
+                    case " photo":
+                        window.location.href = "https://photos.google.com/";
+                        break;
+                    case "wikipedia":
+                    case " wikipedia":
+                    case "wiki":
+                    case " wiki":
+                        window.location.href = "https://en.wikipedia.org/";
+                        break;
+                    default:
+                        if (val[0] == " ") {
+                            window.location.href = "https://google.com/search?q=" + val.substring(1);
+                        } else {
+                            window.location.href = "https://google.com/search?q=" + val;
+                        }
+                }
+            }
+        }
 </script>
     <div class="footer-basic">
         <footer>
