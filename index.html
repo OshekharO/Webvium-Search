@@ -68,15 +68,15 @@ body{
   position: relative;
 }
 
-.search-input input{
+.searchbar{
   height:45px;
-  width: 300px;
+  border:none;
+  width:500px;
+  font-size:16px;
   outline: none;
-  border: none;
   background-color: #202020;
   color: #fff;
-  padding: 0 60px 0 20px;
-  font-size:16px;
+  font-family: 'Righteous', cursive;
 }
 
 .search-input:hover{
@@ -93,7 +93,7 @@ body{
     <div class="wrapper">
       <div class="search-input">
         <a href="" target="_blank" hidden></a>
-        <input id="search-field" type="text" placeholder="Type to search.." name="search-field" onkeypress="return search(event)" />
+        <input class="searchbar" id="search-field" type="text" placeholder="Type to search.." name="search-field" onkeypress="return search(event)" />
       </div>
     </div>
     <script>
