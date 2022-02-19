@@ -197,7 +197,7 @@ body{
       </div>
     </div>
     <script>
-function interpretSearch() {
+    function interpretSearch() {
     var search = document.getElementById("js-search-input").value.split(" ");
     var searchTerms = "";
 
@@ -220,6 +220,12 @@ function interpretSearch() {
     window.location.href = searchTerms;
     return false;
 };
+
+document.addEventListener("keyup", (e) => {
+    if (e.keyCode === 13) {
+        search("search");
+    }
+});
 </script>
     <div class="footer-basic">
         <footer>
