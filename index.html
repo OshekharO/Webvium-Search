@@ -29,6 +29,7 @@
 <link rel="apple-touch-icon" href="https://mrepol742.github.io/webvium/favicon.png">
 
       <link rel="shortcut icon" type="image/x-icon" href="https://mrepol742.github.io/webvium/favicon.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
     <meta http-equiv="Content-Language" content="en_US" />
     <title>Webvium Search</title>
@@ -64,9 +65,9 @@ body{
 .wrapper .search-input{
   background: #fff;
   width: 100%;
-  border-radius: 5px;
+  border-radius:30px;
+  border:1px solid #dcdcdc;
   position: relative;
-  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
 }
 
 .search-input input{
@@ -84,49 +85,13 @@ body{
   border-radius: 5px 5px 0 0;
 }
 
-.search-input .autocom-box{
-  padding: 0;
-  opacity: 0;
-  pointer-events: none;
-  max-height: 280px;
-  overflow-y: auto;
+.search-input:hover{
+  box-shadow: 1px 1px 7px 1px #FF0091;
 }
-
-.search-input.active .autocom-box{
-  padding: 10px 8px;
-  opacity: 1;
-  pointer-events: auto;
+.search-input:focus-within{
+  box-shadow: 1px 1px 7px 1px #EC0034;
+  outline:none;
 }
-
-.autocom-box li{
-  list-style: none;
-  padding: 8px 12px;
-  display: none;
-  width: 100%;
-  cursor: default;
-  border-radius: 3px;
-}
-
-.search-input.active .autocom-box li{
-  display: block;
-}
-.autocom-box li:hover{
-  background: #f2f2f2;
-}
-
-.search-input .icon{
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  height: 55px;
-  width: 55px;
-  text-align: center;
-  line-height: 55px;
-  font-size: 20px;
-  color: #000;
-  cursor: pointer;
-}
-
 </style>
 
   </head>
@@ -169,7 +134,13 @@ body{
             }
         }
 </script>
-    
+    <footer class="page-footer font-small unique-color-dark pt-4">
+  <div class="footer-copyright text-center py-3">© 2022 Copyright:
+    <a href="https://github.com/webvium/webvium"> WEBVIUM</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
