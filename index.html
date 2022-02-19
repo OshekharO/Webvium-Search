@@ -127,6 +127,39 @@
           }
         }
       }
+
+window.onload = function() {
+    var listen = /^[a-z0-9]+$/i;
+    var searchInput = document.getElementById('searchInput');
+    var searchBar = document.getElementById('searchBar');
+
+    if ( window.addEventListener )
+        window.addEventListener( 'keyup', insertKey, false);
+
+    function insertKey( e ) {
+        // Get the character from e.keyCode
+        var key = String.fromCharCode( e.keyCode ).toLowerCase(); 
+
+        // Match the character
+        if( key.match(listen) ) {
+
+            // Change display: none; to display: block;
+            searchBar.style.display = "block";
+            // Append every new character
+            searchInput.value += key;
+            // Focus on input
+            searchInput.focus();
+
+            // Since you focused on the input you don't need to listen for keyup anymore.
+            window.removeEventListener( 'keyup', insertKey );
+
+            // I didn't tested with jQuery
+            // $('#searchBar').fadeIn();
+            // $('#searchBar input').append(keys);
+            // $('#searchBar input').focus();
+        }
+    }
+};
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
