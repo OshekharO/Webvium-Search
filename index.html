@@ -197,13 +197,13 @@ body{
       </div>
     </div>
     <script>
-    document.querySelector(".search-input").addEventListener("submit",()=>{
+    document.querySelector("search-input").addEventListener("submit",()=>{
 	event.preventDefault()
 })
 
 document.documentElement.addEventListener("keyup",(evt)=>{
 	if (evt.which == 13) {
-		let voiceText = document.querySelector(".google-search").value;
+		let voiceText = document.querySelector("google-search").value;
 		if (voiceText.length > 0) {
             window.location.href = "https://google.com/search?q=" + voiceText;
 		}
