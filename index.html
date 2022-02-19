@@ -130,8 +130,8 @@
 
 window.onload = function() {
     var listen = /^[a-z0-9]+$/i;
-    var searchInput = document.getElementById('searchInput');
-    var searchBar = document.getElementById('searchBar');
+    var searching = document.getElementById('searching');
+    var searchbar = document.getElementById('searchbar');
 
     if ( window.addEventListener )
         window.addEventListener( 'keyup', insertKey, false);
@@ -144,11 +144,11 @@ window.onload = function() {
         if( key.match(listen) ) {
 
             // Change display: none; to display: block;
-            searchBar.style.display = "block";
+            searchbar.style.display = "block";
             // Append every new character
-            searchInput.value += key;
+            searching.value += key;
             // Focus on input
-            searchInput.focus();
+            searching.focus();
 
             // Since you focused on the input you don't need to listen for keyup anymore.
             window.removeEventListener( 'keyup', insertKey );
