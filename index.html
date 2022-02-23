@@ -30,17 +30,15 @@
 <body>
 <main>
     <section class="navi-search">
-        <form class="input-box">
+        <form class="input-box" method="get" action="https://duckduckgo.com/?q=search" target="_blank">
             <div class="search-select" title="switch search engine">
                 <div class="iconfont icon-google"></div>
             </div>
             <input id="search" type="text" placeholder="search..." onkeypress="return search(event)"/>
-            
+            <button class="btn" type="submit"></button>
         </form>
     </section>
 </main>
-
-<script src="search.js"></script>
 
     </body>
 </html>
