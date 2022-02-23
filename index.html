@@ -35,44 +35,42 @@
                 <div class="iconfont icon-google"></div>
             </div>
             <div class="search-selector"></div>
-            <input id="search-field" type="text" placeholder="search..."/>
+            <input id="search-field" type="text" placeholder="search..." onkeypress="return search(event)"/>
             <button class="btn" title="search"><i class="fa fa-search"></i></button>
         </form>
     </section>
 </main>
 
     <script>
-      function search(e) {
-        if (e.keyCode == 13) {
-          var val = document.getElementById("search-field").value;
-          document.getElementById("search-field").value = "";
-          switch (val) {
-            case "steam":
-            case " steam":
-              window.location.href = "steam:";
-              break;
-            case "photos":
-            case " photos":
-            case "photo":
-            case " photo":
-              window.location.href = "https://photos.google.com/";
-              break;
-            case "wikipedia":
-            case " wikipedia":
-            case "wiki":
-            case " wiki":
-              window.location.href = "https://en.wikipedia.org/";
-              break;
-            default:
-              if (val[0] == " ") {
-                window.location.href = "https://duckduckgo.com/?q=" + val.substring(1);
-              } else {
-                window.location.href = "https://duckduckgo.com/?q=" + val;
-              }
-          }
-        }
-      }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        function search(e) {
+            if (e.keyCode == 13) {
+                var val = document.getElementById("search-field").value;
+                document.getElementById('search-field').value = '';
+                switch (val) {
+                    case "steam":
+                    case " steam":
+                        window.location.href = "steam:";
+                        break;
+                    case "photos":
+                    case " photos":
+                    case "photo":
+                    case " photo":
+                        window.location.href = "https://photos.google.com/";
+                        break;
+                    case "wikipedia":
+                    case " wikipedia":
+                    case "wiki":
+                    case " wiki":
+                        window.location.href = "https://en.wikipedia.org/";
+                        break;
+                    default:
+                        if (val[0] == " ") {
+                            window.location.href = "https://duckduckgo.com/?q=" + val.substring(1);
+                        } else {
+                            window.location.href = "https://duckduckgo.com/?q=" + val;
+                        }
+                }
+            }
+</script>
 </body>
 </html>
