@@ -16,119 +16,111 @@
 -->
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="robots" content="all" />
-    <meta property="og:url" content="/" />
-    <meta property="og:local" content="en_US" />
-    <meta property="og:site_name" content="Webvium Search - Lightweight, Fast, Material." />
-    <meta property="og:type" content="website" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="apple-touch-icon" href="https://mrepol742.github.io/webvium/favicon.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="https://mrepol742.github.io/webvium/favicon.png" />
-    <meta http-equiv="Content-Language" content="en_US" />
+<html lang="en" class="font-auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webvium Search</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-      body {
-        background: #fff;
-        padding: 0;
-        overflow: hidden;
-      }
-      ::selection {
-        color: #fff;
-        background: #000;
-      }
-      .wrapper {
-        max-width: 450px;
-        margin: 150px auto;
-      }
-      .wrapper .search-input {
-        padding: 0 20px;
-        background: #fff;
-        width: 100%;
-        border-radius: 5px;
-        position: relative;
-      }
-      .wrapper img {
-        background: #fff;
-        width: 100%;
-        border-radius: 5px;
-        position: relative;
-      }
-      .search-input input {
-        background-color: #202020;
-        color: #fff;
-        height: 55px;
-        width: 100%;
-        outline: none;
-        border: none;
-        border-radius: 5px;
-        padding: 0 60px 0 20px;
-        font-size: 18px;
-      }
-      .search-input.active input {
-        border-radius: 5px 5px 0 0;
-      }
-.top {
-	position: relative;
-	height: 10px;
-	background: linear-gradient(141deg, cyan 0%, rebeccapurple 40%, deeppink 90%);
-}
-
-    </style>
-  </head>
-  <body>
-    <div class='top'></div>
-    <div class="wrapper">
-      <img src="https://mrepol742.github.io/images/webvium_transparent_icon.png" width="300" height="250"/>
-      <div class="search-input">
-        <a href="" target="_blank" hidden></a>
-        <input id="search-field" type="text" placeholder="Type to search.." name="search-field" onkeypress="return search(event)" />
-      </div>
+    <link rel="icon" href="static/icon.png" sizes="192x192"/>
+    <link rel="stylesheet" href="https://gistcdn.githack.com/OshekharO/7bf6865cee3feeb204142cf32582a4d0/raw/1d5252dbac418e5368046a776222634df9beb0ae/kico.css">
+    <link rel="stylesheet" href="https://gistcdn.githack.com/OshekharO/1b560480bdf0f5e228bf3774e4d3505d/raw/8b8be847acc3865fb344ae1f3c0f473b4c38f17d/font.css">
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://gistcdn.githack.com/OshekharO/db4f4bd584772380763b6aeda9361679/raw/e34ec38d19270ac76fc34ae41d1d5bcaea3698ac/main.css">
+</head>
+<body>
+<header>
+    <div class="action-btn updated" ks-tag="bottom" ks-text="updated">
+        <i class="fa fa-bullhorn"></i>
     </div>
-    <script>
-      function search(e) {
-        if (e.keyCode == 13) {
-          var val = document.getElementById("search-field").value;
-          document.getElementById("search-field").value = "";
-          switch (val) {
-            case "steam":
-            case " steam":
-              window.location.href = "steam:";
-              break;
-            case "photos":
-            case " photos":
-            case "photo":
-            case " photo":
-              window.location.href = "https://photos.google.com/";
-              break;
-            case "wikipedia":
-            case " wikipedia":
-            case "wiki":
-            case " wiki":
-              window.location.href = "https://en.wikipedia.org/";
-              break;
-            default:
-              if (val[0] == " ") {
-                window.location.href = "https://duckduckgo.com/?q=" + val.substring(1);
-              } else {
-                window.location.href = "https://duckduckgo.com/?q=" + val;
-              }
-          }
-        }
-      }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </body>
+    <div class="action-btn about" ks-tag="bottom" ks-text="about">
+        <i class="fa fa-info-circle"></i>
+    </div>
+    <div class="action-btn setting" ks-tag="bottom" ks-text="set up">
+        <i class="fa fa-cog"></i>
+    </div>
+</header>
+<main>
+    <section class="navi-search">
+        <form class="input-box">
+            <div class="search-select" title="switch search engine">
+                <div class="iconfont icon-baidu"></div>
+            </div>
+            <div class="search-selector"></div>
+            <input type="text" placeholder="search..."/>
+            <button class="btn" title="search"><i class="fa fa-search"></i></button>
+        </form>
+    </section>
+    <section class="navi-items"></section>
+    <section class="navi-background"></section>
+</main>
+<window>
+    <section class="the-window updated">
+        <div class="window-head">
+            <button>×</button>
+            <h3>Navigation updated</h3>
+        </div>
+        <div class="window-body">
+            <article>
+                <p>Thank you for your use and support! In this version, I added a major version update mechanism for the first time, and the content of each update will be told here！</p>
+                <blockquote>PS：This prompt will only appear when the latest version is opened for the first time! </blockquote>
+                <h3>This Update:</h3>
+                <ul>
+                    <li>Added sites and icons, icons got bigger!</li>
+                    <li>Improve the setting of changing font color after Bing wallpaper adapts!</li>
+                    <li>All links open as new tabs!</li>
+                    <li>Added update prompt as you can see!</li>
+                </ul>
+                <h3>Update Notice:</h3>
+                <ul>
+                    <li>More comfortable custom site listing experience</li>
+                    <li>Available to set your wallpaper (local or external)</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+    <section class="the-window about">
+        <div class="window-head">
+            <button>×</button>
+            <h3>About this project</h3>
+        </div>
+        <div class="window-body">
+            <article>
+                <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5eIouPSYZipgSYs4x2VzgEYaV7BMwsgiOdA&usqp=CAU" alt="About"></p>
+                <p>Welcome to the Troll Start Page! This project was built on 2020/5/9 and is an open source project focusing on the community.</p>
+                <p>Its use is very simple, just need to <a href="https://github.com/OshekharO/Webvium-Search" target="_blank">repository for this project</a> Submit a PR to create your own navigation page. It only needs a URL suffix to access it directly without registration and login, which is very convenient and easy to use.</p>
+            </article>
+        </div>
+    </section>
+    <section class="the-window setting">
+        <div class="window-head">
+            <button>×</button>
+            <h3>set up</h3>
+        </div>
+        <div class="window-body">
+            <fieldset>
+                <label>
+                    <span>Default search engine:</span>
+                    <select name="search" data-key="search_method"></select>
+                </label>
+                <label>
+                    <span>Custom background:</span>
+                    <select name="background" data-key="back_method"></select>
+                </label>
+                <label>
+                    <span>Optional preset navigation items</span>
+                    <select multiple name="sites" data-key="sites" style="height: 15em"></select>
+                </label>
+                <p>
+                    <button class="btn small blue" name="reset">Reset</button>
+                    <button class="btn small" name="output">Export</button>
+                </p>
+            </fieldset>
+        </div>
+    </section>
+</window>
+
+<script src="https://gistcdn.githack.com/OshekharO/e0eac29bb906c11083e5d19062c15fde/raw/3e0eb1c7098153bda855e37721069041aa1db8ff/kico.js"></script>
+<script src="https://gistcdn.githack.com/OshekharO/c22091662b5dea7f45f4ae6f7f1fab1c/raw/3be5d958b5cb45528f7dae093584365789172516/main.js"></script>
+
+</body>
 </html>
