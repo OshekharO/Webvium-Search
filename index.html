@@ -35,14 +35,42 @@
                 <div class="iconfont icon-google"></div>
             </div>
             <div class="search-selector"></div>
-            <input type="text" placeholder="search..."/>
+            <input id="search-field" type="text" placeholder="search..."/>
             <button class="btn" title="search"><i class="fa fa-search"></i></button>
         </form>
     </section>
 </main>
 
-<script src="https://gistcdn.githack.com/OshekharO/e0eac29bb906c11083e5d19062c15fde/raw/3e0eb1c7098153bda855e37721069041aa1db8ff/kico.js"></script>
-<script src="https://gistcdn.githack.com/OshekharO/c22091662b5dea7f45f4ae6f7f1fab1c/raw/34d969fe7f88b14fdbe273e585289d5bc0ba72c1/main.js"></script>
-
+    <script>
+        function search(e) {
+            if (e.keyCode == 13) {
+                var val = document.getElementById("search-field").value;
+                document.getElementById('search-field').value = '';
+                switch (val) {
+                    case "steam":
+                    case " steam":
+                        window.location.href = "steam:";
+                        break;
+                    case "photos":
+                    case " photos":
+                    case "photo":
+                    case " photo":
+                        window.location.href = "https://photos.google.com/";
+                        break;
+                    case "wikipedia":
+                    case " wikipedia":
+                    case "wiki":
+                    case " wiki":
+                        window.location.href = "https://en.wikipedia.org/";
+                        break;
+                    default:
+                        if (val[0] == " ") {
+                            window.location.href = "https://duckduckgo.com/?q=" + val.substring(1);
+                        } else {
+                            window.location.href = "https://duckduckgo.com/?q=" + val;
+                        }
+                }
+            }
+</script>
 </body>
 </html>
