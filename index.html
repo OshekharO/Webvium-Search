@@ -35,43 +35,13 @@
                 <div class="iconfont icon-google"></div>
             </div>
             <div class="search-selector"></div>
-            <input id="search-field" type="text" placeholder="search..." onkeypress="return search(event)"/>
+            <input id="search" type="text" placeholder="search..." onkeypress="return search(event)"/>
             <button class="btn" title="search"><i class="fa fa-search"></i></button>
         </form>
     </section>
 </main>
 
-    <script>
-        function search(e) {
-            if (e.keyCode == 13) {
-                var val = document.getElementById("search-field").value;
-                document.getElementById('search-field').value = '';
-                switch (val) {
-                    case "connect":
-                    case " connectvip":
-                        window.location.href = "https://connectvip.eu.org";
-                        break;
-                    case "ecinema":
-                    case " movies":
-                    case "Bluray":
-                    case " cinema":
-                        window.location.href = "https://ecinema.ml";
-                        break;
-                    case "wikipedia":
-                    case " wikipedia":
-                    case "wiki":
-                    case " wiki":
-                        window.location.href = "https://en.wikipedia.org/";
-                        break;
-                    default:
-                        if (val[0] == " ") {
-                            window.location.href = "https://duckduckgo.com/?q=" + val.substring(1);
-                        } else {
-                            window.location.href = "https://duckduckgo.com/?q=" + val;
-                        }
-                }
-            }
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</body>
+<script src="search.js"></script>
+
+    </body>
 </html>
