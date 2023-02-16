@@ -27,6 +27,32 @@ input#search {
     display: none;
 }
 
+.search-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#search-engine-select {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+#search-engine-select option {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 768px) {
   /* Apply styles for laptops and larger screens */
   main {
