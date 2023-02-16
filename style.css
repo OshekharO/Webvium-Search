@@ -1,99 +1,102 @@
-/* Reset default margin and padding */
 * {
-  margin: 0;
-  padding: 0;
-}
-
-/* Set background color */
-body {
-  background-color: #f0f0f0;
-}
-
-/* Set font family and size */
-body,
-input {
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+  height: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #202124;
+  text-decoration: none;
   font-size: 14px;
 }
 
-/* Style the header */
-header {
-  background-color: #2b2b2b;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
-/* Style the logo */
-header h1 {
-  font-size: 30px;
-  margin: 0;
-}
-
-/* Style the navigation bar */
-nav {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-}
-
-/* Style the links in the navigation bar */
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-/* Style the search form */
-.search-form {
+main {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
-/* Style the select element */
-.search-form select {
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-select {
   margin-right: 10px;
 }
 
-/* Style the input and button elements */
-.search-form input,
-.search-form button {
+#engine-select {
+  background-color: #f2f2f2;
+  border: 1px solid #dadce0;
+  border-radius: 2px;
+  padding: 4px 24px 4px 8px;
+  font-size: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#engine-select:focus {
+  outline: none;
+  box-shadow: 0 0 2px #4285f4;
+}
+
+#search {
+  flex: 1;
   border: none;
-  border-radius: 4px;
-  padding: 10px;
-  margin-right: 10px;
+  background-color: #f2f2f2;
+  padding: 8px;
+  font-size: 16px;
 }
 
-/* Style the button element */
-.search-form button {
-  background-color: #4caf50;
-  color: #fff;
+#search:focus {
+  outline: none;
+  box-shadow: 0 0 2px #4285f4;
+}
+
+button {
+  background-color: #4285f4;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 8px 16px;
   cursor: pointer;
 }
 
-/* Style the results */
-.results {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px #ccc;
-}
-
-/* Style the title in the results */
-.results h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/* Style the URL in the results */
-.results a {
-  color: #000;
-  text-decoration: none;
-}
-
-/* Style the description in the results */
-.results p {
-  margin-bottom: 10px;
+button:hover {
+  background-color: #357ae8;
 }
