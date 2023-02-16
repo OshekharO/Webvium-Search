@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="font-auto">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webvium Search</title>
     <link rel="icon" href="static/icon.png" sizes="192x192"/>
-    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        .search-select {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <main>
     <section class="navi-search">
-        <form class="input-box" method="get" action="https://www.google.com/search?q=search" target="_blank">
+        <form class="input-box" method="get" action="https://www.google.com/search">
             <div class="search-select" title="switch search engine">
-                <select id="search-engine-select">
-                    <option value="https://www.google.com/search?q=">Google</option>
-                    <option value="https://www.bing.com/search?q=">Bing</option>
-                    <option value="https://search.yahoo.com/search?p=">Yahoo</option>
-                </select>
+                <div class="iconfont icon-google"></div>
+                <div class="iconfont icon-bing"></div>
             </div>
-            <input id="search" name="q" type="text" placeholder="search...">
+            <input id="search" name="q" type="text" placeholder="search..."/>
         </form>
     </section>
 </main>
-    </body>
+<script>
+    const searchForm = document.querySelector('.input-box');
+    const searchSelect = document.querySelector('.search-select');
+
+    searchSelect.addEventListener('click', function() {
+        if (searchForm.action === 'https://www.google.com/search') {
+            searchForm.action = 'https://www.bing.com/search';
+            searchSelect.innerHTML = '<div class="iconfont icon-bing"></div><div class="iconfont icon-google"></div>';
+        } else {
+            searchForm.action = 'https://www.google.com/search';
+            searchSelect.innerHTML = '<div class="iconfont icon-google"></div><div class="iconfont icon-bing"></div>';
+        }
+    });
+</script>
+</body>
 </html>
