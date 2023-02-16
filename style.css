@@ -1,73 +1,99 @@
-/* Default styles */
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
+  background-color: #f0f0f0;
 }
 
-main {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+/* Set font family and size */
+body,
+input {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
 
-section.navi-search {
-    display: flex;
-    align-items: center;
+/* Style the header */
+header {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
-input#search {
-    flex: 1;
-    border: none;
-    font-size: 16px;
-    padding: 10px;
+/* Style the logo */
+header h1 {
+  font-size: 30px;
+  margin: 0;
 }
 
-.search-select {
-    display: none;
+/* Style the navigation bar */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
 }
 
-.search-select {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    cursor: pointer;
+/* Style the links in the navigation bar */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
-#search-engine-select {
-    font-size: 1rem;
-    padding: 0.5rem;
-    border: none;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
+/* Style the search form */
+.search-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-#search-engine-select option {
-    font-size: 1rem;
-    padding: 0.5rem;
-    border: none;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
+/* Style the select element */
+.search-form select {
+  margin-right: 10px;
 }
 
-@media only screen and (min-width: 768px) {
-  /* Apply styles for laptops and larger screens */
-  main {
-      max-width: 1000px;
-  }
-
-  .search-select {
-      display: block;
-      margin-right: 10px;
-  }
+/* Style the input and button elements */
+.search-form input,
+.search-form button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin-right: 10px;
 }
 
-@media only screen and (max-width: 767px) {
-  /* Apply styles for mobile devices */
-  input#search {
-      font-size: 14px;
-  }
+/* Style the button element */
+.search-form button {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Style the results */
+.results {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+/* Style the title in the results */
+.results h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style the URL in the results */
+.results a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Style the description in the results */
+.results p {
+  margin-bottom: 10px;
 }
