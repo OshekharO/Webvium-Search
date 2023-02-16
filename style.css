@@ -1,0 +1,65 @@
+/* Apply default styles to all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply custom font to elements with the "font-auto" class */
+.font-auto {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Apply styles to the search input box */
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style the search box */
+#search {
+    font-size: 1.2rem;
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the search engine select button */
+.search-select {
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Style the search engine select button icon */
+.iconfont {
+    font-size: 1.5rem;
+}
+
+.icon-google::before {
+    content: "\f1a0";
+    font-family: "FontAwesome";
+}
+
+/* Apply custom styles to the main element */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Apply styles to the nav section */
+.navi-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
