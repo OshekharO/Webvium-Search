@@ -1,102 +1,81 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  background-color: #f2f2f2;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 10px;
-  border-bottom: 1px solid #e6e6e6;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav img {
-  height: 24px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: #202124;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
+  font-family: Arial, sans-serif;
 }
 
 main {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 30px 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navi-search {
+  text-align: center;
 }
 
 .input-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: inline-block;
+  border-radius: 50px;
+  overflow: hidden;
+  background: white;
+  padding: 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .search-select {
-  margin-right: 10px;
-}
-
-#engine-select {
-  background-color: #f2f2f2;
-  border: 1px solid #dadce0;
-  border-radius: 2px;
-  padding: 4px 24px 4px 8px;
-  font-size: 14px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-#engine-select:focus {
-  outline: none;
-  box-shadow: 0 0 2px #4285f4;
-}
-
-#search {
-  flex: 1;
-  border: none;
-  background-color: #f2f2f2;
-  padding: 8px;
-  font-size: 16px;
-}
-
-#search:focus {
-  outline: none;
-  box-shadow: 0 0 2px #4285f4;
-}
-
-button {
-  background-color: #4285f4;
-  color: #ffffff;
-  border: none;
-  border-radius: 2px;
-  font-size: 16px;
-  padding: 8px 16px;
+  display: inline-block;
+  vertical-align: top;
+  background: #f1f1f1;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  font-size: 1rem;
+  color: #444;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #357ae8;
+#engine-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.input-box #search {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 80px);
+  height: 40px;
+  line-height: 40px;
+  font-size: 1rem;
+  color: #444;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+
+.input-box button {
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  background: #0071c5;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
