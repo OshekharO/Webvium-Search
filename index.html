@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" class="font-auto">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webvium Search</title>
-    <link rel="icon" href="static/icon.png" sizes="192x192"/>
+    <link rel="icon" href="static/icon.png" sizes="192x192" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <style>
-        .search-select {
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-<main>
-    <section class="navi-search">
+    <link
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="navi-search">
         <form class="input-box" method="get" action="https://www.google.com/search">
-            <div class="search-select" title="switch search engine">
-                <div class="iconfont icon-google"></div>
-                <div class="iconfont icon-bing"></div>
-            </div>
-            <input id="search" name="q" type="text" placeholder="search..."/>
+          <div class="search-select" title="Switch Search Engine">
+            <select id="engine-select">
+              <option value="google" selected>Google</option>
+              <option value="bing">Bing</option>
+              <option value="yahoo">Yahoo</option>
+            </select>
+          </div>
+          <input id="search" name="q" type="text" placeholder="Search..." />
+          <button type="submit">Go</button>
         </form>
-    </section>
-</main>
-<script>
-    const searchForm = document.querySelector('.input-box');
-    const searchSelect = document.querySelector('.search-select');
+      </section>
+    </main>
+    <script>
+      document.querySelector(".input-box").addEventListener("submit", function(event) {
+        var select = document.getElementById("engine-select");
+        var selectedOption = select.options[select.selectedIndex].value;
 
-    searchSelect.addEventListener('click', function() {
-        if (searchForm.action === 'https://www.google.com/search') {
-            searchForm.action = 'https://www.bing.com/search';
-            searchSelect.innerHTML = '<div class="iconfont icon-bing"></div><div class="iconfont icon-google"></div>';
-        } else {
-            searchForm.action = 'https://www.google.com/search';
-            searchSelect.innerHTML = '<div class="iconfont icon-google"></div><div class="iconfont icon-bing"></div>';
+        switch (selectedOption) {
+          case "bing":
+            this.action = "https://www.bing.com/search";
+            break;
+          case "yahoo":
+            this.action = "https://search.yahoo.com/search";
+            break;
+          default:
+            this.action = "https://www.google.com/search";
+            break;
         }
-    });
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>
