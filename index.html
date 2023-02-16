@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="font-auto">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>You.com Search</title>
+    <title>Webvium Search</title>
     <link rel="icon" href="static/icon.png" sizes="192x192" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
@@ -13,20 +13,28 @@
     />
   </head>
   <body>
+    <header>
+      <nav>
+        <div class="engine-select">
+          <i class="fa fa-chevron-down"></i>
+          <select id="engine-select">
+            <option value="google" selected>Google</option>
+            <option value="bing">Bing</option>
+            <option value="yahoo">Yahoo</option>
+          </select>
+        </div>
+      </nav>
+    </header>
     <main>
-      <section class="navi-search">
-        <form class="input-box" method="get" action="https://you.com/search">
-          <div class="search-select" title="Switch Search Engine">
-            <select id="engine-select">
-              <option value="google" selected>Google</option>
-              <option value="bing">Bing</option>
-              <option value="yahoo">Yahoo</option>
-            </select>
-          </div>
-          <input id="search" name="q" type="text" placeholder="Search You.com" />
+      <div class="logo-container">
+        <img src="static/logo.png" alt="Webvium Logo" />
+      </div>
+      <div class="search-container">
+        <form class="input-box" method="get" action="https://www.google.com/search">
+          <input id="search" name="q" type="text" placeholder="Search..." />
           <button type="submit">Go</button>
         </form>
-      </section>
+      </div>
     </main>
     <script>
       document.querySelector(".input-box").addEventListener("submit", function(event) {
