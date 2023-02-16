@@ -1,81 +1,107 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Body styles */
 body {
+  background-color: #f1f3f4;
   font-family: Arial, sans-serif;
 }
 
-main {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Header styles */
+header {
+  background-color: white;
+  height: 50px;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
-.navi-search {
-  text-align: center;
+nav {
+  margin-left: 20px;
+}
+
+.engine-select {
+  display: inline-block;
+  position: relative;
+}
+
+.engine-select i {
+  color: #777;
+  font-size: 10px;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+}
+
+.engine-select select {
+  appearance: none;
+  background-color: #e5e5e5;
+  border: none;
+  border-radius: 5px;
+  color: #777;
+  font-size: 14px;
+  padding: 10px;
+  width: 150px;
+}
+
+/* Main styles */
+main {
+  background-color: #f1f3f4;
+  height: 100%;
+  margin-top: 50px;
+  padding: 100px 0;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container img {
+  max-width: 500px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .input-box {
-  display: inline-block;
-  border-radius: 50px;
-  overflow: hidden;
-  background: white;
-  padding: 0 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  padding: 10px;
+  width: 600px;
 }
 
-.search-select {
-  display: inline-block;
-  vertical-align: top;
-  background: #f1f1f1;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 10px;
-  font-size: 1rem;
-  color: #444;
-  cursor: pointer;
-}
-
-#engine-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: none;
+#search {
   border: none;
-  background: none;
-  font-size: 1rem;
-  color: #444;
-  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  width: 90%;
 }
 
-.input-box #search {
-  display: inline-block;
-  vertical-align: top;
-  width: calc(100% - 80px);
-  height: 40px;
-  line-height: 40px;
-  font-size: 1rem;
-  color: #444;
+button {
+  background-color: #4285f4;
   border: none;
-  outline: none;
-  padding: 0 10px;
-}
-
-.input-box button {
-  display: inline-block;
-  vertical-align: top;
-  width: 60px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 1rem;
+  border-radius: 25px;
   color: white;
-  background: #0071c5;
-  border: none;
-  outline: none;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #357ae8;
   cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .engine-select select {
+    width: 100%;
+  }
+
+  .input-box {
+    width: 100%;
+  }
 }
