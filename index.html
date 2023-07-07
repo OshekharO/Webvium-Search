@@ -4,27 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webvium Search</title>
-    <link rel="icon" href="static/icon.png" sizes="192x192" />
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="engine-select">
-          <select id="engine-select">
-            <option value="google" selected>Google</option>
-            <option value="bing">Bing</option>
-            <option value="yahoo">Yahoo</option>
-          </select>
-        </div>
-      </nav>
-    </header>
     <main>
       <div class="logo-container">
         <img src="https://rawcdn.githack.com/OshekharO/Web-Indexer/6655e787c1b50e58b0e8c003a23e3a620ecf46b8/img/tusky.svg" alt="Logo" />
       </div>
       <div class="search-container">
         <form class="input-box" method="get" action="https://www.google.com/search">
+          <select id="engine-select">
+            <option value="google" selected>Google</option>
+            <option value="bing">Bing</option>
+            <option value="yahoo">Yahoo</option>
+          </select>
           <input id="search" name="q" type="text" placeholder="Search..." />
           <button type="submit">Go</button>
         </form>
