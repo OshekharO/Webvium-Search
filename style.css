@@ -1,108 +1,80 @@
 /* Body styles */
+
 body {
-  background-color: #f1f3f4;
-  font-family: Arial, sans-serif;
+background-color: #f1f3f4;
+font-family: Arial, sans-serif;
+margin: 1;
+padding: 0;
 }
 
-/* Header styles */
-header {
-  background-color: white;
-  height: 50px;
-  padding: 10px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-}
-
-nav {
-  margin-left: 20px;
-}
-
-.engine-select {
-  display: inline-block;
-  position: relative;
-}
-
-.engine-select i {
-  color: #777;
-  font-size: 10px;
-  position: absolute;
-  right: 12px;
-  top: 14px;
-}
-
-.engine-select select {
-  appearance: none;
-  background-color: #e5e5e5;
-  border: none;
-  border-radius: 5px;
-  color: #777;
-  font-size: 14px;
-  padding: 10px;
-  width: 150px;
+#engine-select {
+width: 150px;
+border: none;
+background: none;
+outline: none;
+padding: 5px;
 }
 
 /* Main styles */
+
 main {
-  background-color: #f1f3f4;
-  height: 100%;
-  margin-top: 50px;
-  padding: 100px 0;
+background-color: #f1f3f4;
+height: 100%;
+padding: 50px 0;
+align-items: center;
+justify-content: center;
 }
 
 .logo-container {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
 
 .logo-container img {
-  width: 50%;
-  height: 50%;
+width: 50%;
+height: 50%;
 }
 
 .search-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+display: flex;
+justify-content: center;
+margin-top: 50px;
 }
 
 .input-box {
-  background-color: white;
-  border-radius: 25px;
-  display: flex;
-  padding: 10px;
-  width: 600px;
+background-color: white;
+justify-content: space-between;
+border-radius: 25px;
+display: flex;
+padding: 10px;
+width: 80%;
 }
 
 #search {
-  border: none;
-  font-size: 18px;
-  padding: 5px;
-  width: 90%;
+border: none;
+font-size: 18px;
+padding: 5px;
+width: 90%;
 }
 
 button {
-  background-color: #4285f4;
-  border: none;
-  border-radius: 25px;
-  color: white;
-  font-size: 18px;
-  padding: 10px 20px;
+background-color: #4285f4;
+border: none;
+border-radius: 25px;
+color: white;
+font-size: 18px;
+padding: 10px 20px;
 }
 
 button:hover {
-  background-color: #357ae8;
-  cursor: pointer;
+background-color: #357ae8;
+cursor: pointer;
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-  .engine-select select {
-    width: 100%;
-  }
 
-  .input-box {
-    width: 100%;
-  }
+@media (max-width: 768px) {
+.input-box {
+width: 100%;
+}
 }
