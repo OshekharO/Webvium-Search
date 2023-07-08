@@ -15,11 +15,11 @@
         <form class="input-box" method="get" action="https://www.google.com/search">
           <select id="engine-select">
             <option value="google" selected>Google</option>
+            <option value="yahoo">Yahoo</option>
             <option value="bing">Bing</option>
-            <option value="librex">Librex</option>
             <option value="brave">Brave</option>
             <option value="you">You</option>
-            <option value="yahoo">Yahoo</option>
+            <option value="yep">Yep</option>
           </select>
           <input id="search" name="q" type="text" placeholder="Search..." />
           <button type="submit">Go</button>
@@ -44,8 +44,8 @@
           case "brave":
             this.action = "https://search.brave.com/search";
             break;
-          case "librex":
-            this.action = "https://librex.me/search.php";
+          case "yep":
+            this.action = "https://yep.com/web";
             break;
           default:
             this.action = "https://www.google.com/search";
