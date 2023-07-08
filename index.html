@@ -16,6 +16,9 @@
           <select id="engine-select">
             <option value="google" selected>Google</option>
             <option value="bing">Bing</option>
+            <option value="librex">Librex</option>
+            <option value="brave">Brave</option>
+            <option value="you">You</option>
             <option value="yahoo">Yahoo</option>
           </select>
           <input id="search" name="q" type="text" placeholder="Search..." />
@@ -34,6 +37,15 @@
             break;
           case "yahoo":
             this.action = "https://search.yahoo.com/search";
+            break;
+          case "you":
+            this.action = "https://you.com/search";
+            break;
+          case "brave":
+            this.action = "https://search.brave.com/search";
+            break;
+          case "librex":
+            this.action = "https://librex.me/search.php";
             break;
           default:
             this.action = "https://www.google.com/search";
