@@ -81,7 +81,7 @@ width: 100%;
 
 @media (min-width:801px) {
 .logo-container img {
-max-width: 70%;
-max-height: 80%;
+max-width: 60%;
+max-height: 60%;
 }
 }
