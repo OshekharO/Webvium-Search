@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webvium Search</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://saksham.thedev.id/Webvium-Search/favicon.png">
+    <meta property="og:type" content="website" />
+    <meta charset="utf-8">
+    <meta property="article:publisher" content="https://www.facebook.com/oshekher">
+    <meta property="article:modified_time" content="2023-07-08T13:37:36+00:00">
+    <meta property="og:image:alt" content="Webvium Search">
+    <meta property="twitter:image:src" content="https://saksham.thedev.id/Webvium-Search/favicon.png" />
+    <meta property="twitter:title"
+      content="Webvium Search - The new way to browser the web" />
+    <meta property="twitter:description"
+      content="Browse the internet easier with Webvium Search" />
+    <meta property="og:title"
+      content="Webvium Search - The new way to browser the web">
+    <meta property="og:url" content="https://saksham.thedev.id/Webvium-Search/">
+    <meta property="og:site_name"
+      content="Webvium Search - The new way to browser the web">
+    <meta property="og:description"
+      content="Browse the internet easier with Webvium Search">
+    <meta property="og:image" content="https://saksham.thedev.id/Webvium-Search/favicon.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="webvium, webvium search">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+      content="Browse the internet easier with Webvium Search">
+
+    <meta name="twitter:creator" content="@PurityWasHere" />
+    <meta name="twitter:site" content="@PurityWasHere" />
+    <meta name="twitter:domain" content="saksham.thedev.id" />
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://saksham.thedev.id/Webvium-Search/">
+  
+    <meta name="hostname" content="saksham.thedev.id">
+    <script type="application/ld+json">
+          {
+            "@context": "http://schema.org/",
+            "@type": "WebApplication",
+              "applicationCategory":"CommunicationApplication",
+              "description":"Browse the internet easier with Webvium Search",
+              "image":"https://saksham.thedev.id/Webvium-Search/favicon.png",
+              "name":"Webvium Search - The new way to browser the web",
+              "url":"https://saksham.thedev.id/Webvium-Search/",
+              "aggregateRating": {        "@type": "AggregateRating",        "ratingValue": "4.0",        "ratingCount": "45"      },
+              "offers": {        "@type": "Offer",        "price": "0"      } 
+          }
+          </script>
+
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <title>Webvium Search - The new way to browser the web</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <main>
-      <div class="logo-container">
-        <img src="https://rawcdn.githack.com/OshekharO/Web-Indexer/6655e787c1b50e58b0e8c003a23e3a620ecf46b8/img/tusky.svg" alt="Logo" />
-      </div>
+      <img class="mx-auto img-fluid d-block" src="https://rawcdn.githack.com/OshekharO/Web-Indexer/6655e787c1b50e58b0e8c003a23e3a620ecf46b8/img/tusky.svg" alt="Logo" width="200"/>
       <div class="search-container">
         <form class="input-box" method="get" action="https://www.google.com/search">
           <select id="engine-select">
@@ -20,13 +66,20 @@
             <option value="brave">Brave</option>
             <option value="you">You</option>
             <option value="yep">Yep</option>
+            <option value="webvium">Webvium</option>
           </select>
           <input id="search" name="q" type="text" placeholder="Search..." />
-          <button type="submit">Go</button>
+          <button id="go" type="submit">Go</button>
         </form>
       </div>
     </main>
     <script>
+      search.addEventListener("keyup", function (event) {
+	      if (event.key === "Enter") {
+		        go.click();
+	      }
+      });
+
       document.querySelector(".input-box").addEventListener("submit", function(event) {
         var select = document.getElementById("engine-select");
         var selectedOption = select.options[select.selectedIndex].value;
@@ -46,6 +99,9 @@
             break;
           case "yep":
             this.action = "https://yep.com/web";
+            break;
+          case "webvium":
+            this.action = "https://mrepol742.github.io/search";
             break;
           default:
             this.action = "https://www.google.com/search";

@@ -1,87 +1,95 @@
 /* Body styles */
 
 body {
-background-color: #f1f3f4;
-font-family: Arial, sans-serif;
-margin: 1;
-padding: 0;
+    background-color: #f1f3f4;
+    font-family: Arial, sans-serif;
+    margin: 1;
+    padding: 0;
 }
 
 #engine-select {
-width: 150px;
-border: none;
-background: none;
-outline: none;
-padding: 5px;
+    width: 150px;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 5px;
 }
 
 /* Main styles */
 
 main {
-background-color: #f1f3f4;
-height: 100%;
-padding: 50px 0;
-align-items: center;
-justify-content: center;
+    background-color: #f1f3f4;
+    height: 100%;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-container {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
-.logo-container img {
-width: 50%;
-height: 50%;
-}
+ 
 
 .search-container {
-display: flex;
-justify-content: center;
-margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .input-box {
-background-color: white;
-justify-content: space-between;
-border-radius: 25px;
-display: flex;
-padding: 10px;
-width: 80%;
+    background-color: white;
+    justify-content: space-between;
+    border-radius: 25px;
+    display: flex;
+    padding: 10px;
+    width: 80%;
 }
 
 #search {
-border: none;
-font-size: 18px;
-padding: 5px;
-width: 90%;
+    border: none;
+    font-size: 18px;
+    padding: 5px;
+    width: 90%;
 }
 
 button {
-background-color: #4285f4;
-border: none;
-border-radius: 25px;
-color: white;
-font-size: 18px;
-padding: 10px 20px;
+    background-color: #4285f4;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
 }
 
 button:hover {
-background-color: #357ae8;
-cursor: pointer;
+    background-color: #357ae8;
+    cursor: pointer;
 }
 
 /* Responsive styles */
 
 @media (max-width: 768px) {
-.input-box {
-width: 100%;
-}
+    .input-box {
+        width: 100%;
+    }
 }
 
 @media (min-width:801px) {
-.logo-container img {
-max-width: 50%;
-max-height: 50%;
+  
 }
+
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
