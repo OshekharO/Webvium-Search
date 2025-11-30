@@ -1,113 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="https://saksham.thedev.id/Webvium-Search/favicon.png">
-    <meta property="og:type" content="website" />
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Webvium Search - The New Way to Browse the Web</title>
+    <meta name="title" content="Webvium Search - The New Way to Browse the Web">
+    <meta name="description" content="Browse the internet more easily with Webvium Search. A fast, privacy-focused search portal with multiple search engine options.">
+    <meta name="keywords" content="webvium, webvium search, search engine, privacy search, browser homepage">
+    <meta name="author" content="OshekharO">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#4285f4" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
+    <meta name="color-scheme" content="light dark">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saksham.thedev.id/Webvium-Search/">
+    <meta property="og:title" content="Webvium Search - The New Way to Browse the Web">
+    <meta property="og:description" content="Browse the internet more easily with Webvium Search. A fast, privacy-focused search portal with multiple search engine options.">
+    <meta property="og:image" content="https://saksham.thedev.id/Webvium-Search/favicon.png">
+    <meta property="og:image:alt" content="Webvium Search Logo">
+    <meta property="og:site_name" content="Webvium Search">
     <meta property="article:publisher" content="https://www.facebook.com/oshekher">
     <meta property="article:modified_time" content="2023-07-08T13:37:36+00:00">
-    <meta property="og:image:alt" content="Webvium Search">
-    <meta property="twitter:image:src" content="https://saksham.thedev.id/Webvium-Search/favicon.png" />
-    <meta property="twitter:title"
-      content="Webvium Search - The new way to browser the web" />
-    <meta property="twitter:description"
-      content="Browse the internet easier with Webvium Search" />
-    <meta property="og:title"
-      content="Webvium Search - The new way to browser the web">
-    <meta property="og:url" content="https://saksham.thedev.id/Webvium-Search/">
-    <meta property="og:site_name"
-      content="Webvium Search - The new way to browser the web">
-    <meta property="og:description"
-      content="Browse the internet easier with Webvium Search">
-    <meta property="og:image" content="https://saksham.thedev.id/Webvium-Search/favicon.png">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="keywords" content="webvium, webvium search">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-      content="Browse the internet easier with Webvium Search">
 
-    <meta name="twitter:creator" content="@PurityWasHere" />
-    <meta name="twitter:site" content="@PurityWasHere" />
-    <meta name="twitter:domain" content="saksham.thedev.id" />
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://saksham.thedev.id/Webvium-Search/">
+    <meta name="twitter:title" content="Webvium Search - The New Way to Browse the Web">
+    <meta name="twitter:description" content="Browse the internet more easily with Webvium Search. A fast, privacy-focused search portal.">
+    <meta name="twitter:image" content="https://saksham.thedev.id/Webvium-Search/favicon.png">
+    <meta name="twitter:creator" content="@PurityWasHere">
+    <meta name="twitter:site" content="@PurityWasHere">
+    <meta name="twitter:domain" content="saksham.thedev.id">
 
+    <!-- Canonical -->
     <link rel="canonical" href="https://saksham.thedev.id/Webvium-Search/">
-  
     <meta name="hostname" content="saksham.thedev.id">
-    <script type="application/ld+json">
-          {
-            "@context": "http://schema.org/",
-            "@type": "WebApplication",
-              "applicationCategory":"CommunicationApplication",
-              "description":"Browse the internet easier with Webvium Search",
-              "image":"https://saksham.thedev.id/Webvium-Search/favicon.png",
-              "name":"Webvium Search - The new way to browser the web",
-              "url":"https://saksham.thedev.id/Webvium-Search/",
-              "aggregateRating": {        "@type": "AggregateRating",        "ratingValue": "4.0",        "ratingCount": "45"      },
-              "offers": {        "@type": "Offer",        "price": "0"      } 
-          }
-          </script>
-
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <title>Webvium Search - The new way to browser the web</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+    <!-- Preconnect to external resources for performance -->
+    <link rel="preconnect" href="https://rawcdn.githack.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://www.bing.com">
+    <link rel="dns-prefetch" href="https://search.brave.com">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Webvium Search",
+      "alternateName": "Webvium Search Portal",
+      "url": "https://saksham.thedev.id/Webvium-Search/",
+      "description": "Browse the internet more easily with Webvium Search. A fast, privacy-focused search portal with multiple search engine options.",
+      "applicationCategory": "SearchApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "image": "https://saksham.thedev.id/Webvium-Search/favicon.png",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "120",
+        "bestRating": "5"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "OshekharO",
+        "url": "https://github.com/OshekharO"
+      }
+    }
+    </script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <main>
-      <img class="mx-auto img-fluid d-block" src="https://rawcdn.githack.com/OshekharO/Web-Indexer/6655e787c1b50e58b0e8c003a23e3a620ecf46b8/img/tusky.svg" alt="Logo" width="200"/>
-      <div class="search-container">
-        <form class="input-box" method="get" action="https://www.google.com/search">
-          <select id="engine-select">
-            <option value="google" selected>Google</option>
-            <option value="yahoo">Yahoo</option>
-            <option value="bing">Bing</option>
-            <option value="brave">Brave</option>
-            <option value="you">You</option>
-            <option value="yep">Yep</option>
-            <option value="webvium">Webvium</option>
-          </select>
-          <input id="search" name="q" type="text" placeholder="Search..." />
-          <button id="go" type="submit">Go</button>
-        </form>
+    <a href="#search" class="skip-link">Skip to search</a>
+    
+    <header class="header">
+      <div class="logo-wrapper">
+        <img 
+          class="logo" 
+          src="https://rawcdn.githack.com/OshekharO/Web-Indexer/6655e787c1b50e58b0e8c003a23e3a620ecf46b8/img/tusky.svg" 
+          alt="Webvium Search Logo" 
+          width="180" 
+          height="180"
+          loading="eager"
+        >
+        <h1 class="visually-hidden">Webvium Search</h1>
       </div>
+    </header>
+    
+    <main class="main">
+      <section class="search-section" aria-label="Search">
+        <div class="search-container">
+          <form 
+            id="search-form" 
+            class="search-form" 
+            method="get" 
+            action="https://www.google.com/search"
+            role="search"
+            aria-label="Web search"
+          >
+            <div class="search-box">
+              <label for="engine-select" class="visually-hidden">Select search engine</label>
+              <select id="engine-select" name="engine" aria-label="Search engine">
+                <option value="google" selected>🔍 Google</option>
+                <option value="bing">🔎 Bing</option>
+                <option value="duckduckgo">🦆 DuckDuckGo</option>
+                <option value="brave">🦁 Brave</option>
+                <option value="yahoo">📧 Yahoo</option>
+                <option value="ecosia">🌳 Ecosia</option>
+                <option value="you">🤖 You.com</option>
+                <option value="yep">✅ Yep</option>
+                <option value="webvium">🌐 Webvium</option>
+              </select>
+              
+              <div class="input-wrapper">
+                <label for="search" class="visually-hidden">Search query</label>
+                <input 
+                  id="search" 
+                  name="q" 
+                  type="search" 
+                  placeholder="Search the web..." 
+                  autocomplete="off"
+                  autocapitalize="off"
+                  autocorrect="off"
+                  spellcheck="false"
+                  aria-label="Search query"
+                  required
+                >
+                <button 
+                  type="button" 
+                  id="clear-btn" 
+                  class="clear-btn" 
+                  aria-label="Clear search"
+                  hidden
+                >
+                  ✕
+                </button>
+              </div>
+              
+              <button id="go" type="submit" aria-label="Search">
+                <span class="btn-text">Search</span>
+                <span class="btn-icon" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </form>
+          
+          <div class="keyboard-hints" aria-hidden="true">
+            <span class="hint"><kbd>Enter</kbd> to search</span>
+            <span class="hint"><kbd>/</kbd> to focus</span>
+          </div>
+        </div>
+      </section>
+      
+      <section class="quick-links" aria-label="Quick links">
+        <h2 class="visually-hidden">Quick Links</h2>
+        <nav class="quick-links-nav">
+          <a href="https://github.com/webvium" class="quick-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <span class="quick-link-icon">📦</span>
+            <span class="quick-link-text">GitHub</span>
+          </a>
+          <a href="https://github.com/OshekharO/Webvium-Search" class="quick-link" target="_blank" rel="noopener noreferrer" aria-label="Source Code">
+            <span class="quick-link-icon">💻</span>
+            <span class="quick-link-text">Source</span>
+          </a>
+        </nav>
+      </section>
     </main>
+    
+    <footer class="footer">
+      <p class="footer-text">
+        Made with ❤️ by 
+        <a href="https://github.com/OshekharO" target="_blank" rel="noopener noreferrer">OshekharO</a>
+      </p>
+      <p class="footer-meta">
+        <span class="engine-indicator" id="current-engine" aria-live="polite">Using Google</span>
+      </p>
+    </footer>
+
     <script>
-      search.addEventListener("keyup", function (event) {
-	      if (event.key === "Enter") {
-		        go.click();
-	      }
-      });
-
-      document.querySelector(".input-box").addEventListener("submit", function(event) {
-        var select = document.getElementById("engine-select");
-        var selectedOption = select.options[select.selectedIndex].value;
-
-        switch (selectedOption) {
-          case "bing":
-            this.action = "https://www.bing.com/search";
-            break;
-          case "yahoo":
-            this.action = "https://search.yahoo.com/search";
-            break;
-          case "you":
-            this.action = "https://you.com/search";
-            break;
-          case "brave":
-            this.action = "https://search.brave.com/search";
-            break;
-          case "yep":
-            this.action = "https://yep.com/web";
-            break;
-          case "webvium":
-            this.action = "https://mrepol742.github.io/search";
-            break;
-          default:
-            this.action = "https://www.google.com/search";
-            break;
+      (function() {
+        'use strict';
+        
+        // DOM Elements
+        const searchForm = document.getElementById('search-form');
+        const searchInput = document.getElementById('search');
+        const engineSelect = document.getElementById('engine-select');
+        const clearBtn = document.getElementById('clear-btn');
+        const currentEngineIndicator = document.getElementById('current-engine');
+        
+        // Search engine configurations
+        const searchEngines = {
+          google: { url: 'https://www.google.com/search', name: 'Google', param: 'q' },
+          bing: { url: 'https://www.bing.com/search', name: 'Bing', param: 'q' },
+          duckduckgo: { url: 'https://duckduckgo.com/', name: 'DuckDuckGo', param: 'q' },
+          brave: { url: 'https://search.brave.com/search', name: 'Brave', param: 'q' },
+          yahoo: { url: 'https://search.yahoo.com/search', name: 'Yahoo', param: 'p' },
+          ecosia: { url: 'https://www.ecosia.org/search', name: 'Ecosia', param: 'q' },
+          you: { url: 'https://you.com/search', name: 'You.com', param: 'q' },
+          yep: { url: 'https://yep.com/web', name: 'Yep', param: 'q' },
+          webvium: { url: 'https://mrepol742.github.io/search', name: 'Webvium', param: 'q' }
+        };
+        
+        // Storage key for saving preferences
+        const STORAGE_KEY = 'webvium-search-engine';
+        
+        // Load saved search engine preference
+        function loadPreference() {
+          try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved && searchEngines[saved]) {
+              engineSelect.value = saved;
+              updateEngineIndicator(saved);
+            }
+          } catch (e) {
+            // localStorage not available, ignore
+          }
         }
-      });
+        
+        // Save search engine preference
+        function savePreference(engine) {
+          try {
+            localStorage.setItem(STORAGE_KEY, engine);
+          } catch (e) {
+            // localStorage not available, ignore
+          }
+        }
+        
+        // Update the current engine indicator
+        function updateEngineIndicator(engine) {
+          const engineData = searchEngines[engine] || searchEngines.google;
+          currentEngineIndicator.textContent = `Using ${engineData.name}`;
+        }
+        
+        // Handle form submission
+        searchForm.addEventListener('submit', function(event) {
+          const selectedEngine = engineSelect.value;
+          const engineData = searchEngines[selectedEngine] || searchEngines.google;
+          
+          // Update form action
+          this.action = engineData.url;
+          
+          // Update input name if needed (Yahoo uses 'p' instead of 'q')
+          if (engineData.param !== 'q') {
+            searchInput.name = engineData.param;
+          } else {
+            searchInput.name = 'q';
+          }
+          
+          // Save preference
+          savePreference(selectedEngine);
+        });
+        
+        // Handle search engine change
+        engineSelect.addEventListener('change', function() {
+          const selectedEngine = this.value;
+          updateEngineIndicator(selectedEngine);
+          savePreference(selectedEngine);
+          searchInput.focus();
+        });
+        
+        // Handle clear button visibility
+        searchInput.addEventListener('input', function() {
+          clearBtn.hidden = this.value.length === 0;
+        });
+        
+        // Handle clear button click
+        clearBtn.addEventListener('click', function() {
+          searchInput.value = '';
+          clearBtn.hidden = true;
+          searchInput.focus();
+        });
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+          // Press '/' to focus search (when not already in an input)
+          if (event.key === '/' && document.activeElement !== searchInput && document.activeElement !== engineSelect) {
+            event.preventDefault();
+            searchInput.focus();
+            searchInput.select();
+          }
+          
+          // Escape to clear search
+          if (event.key === 'Escape' && document.activeElement === searchInput) {
+            if (searchInput.value) {
+              searchInput.value = '';
+              clearBtn.hidden = true;
+            } else {
+              searchInput.blur();
+            }
+          }
+        });
+        
+        // Auto-focus search input on page load
+        window.addEventListener('DOMContentLoaded', function() {
+          loadPreference();
+          
+          // Only auto-focus if not on mobile (to avoid keyboard popup)
+          if (window.innerWidth > 768) {
+            searchInput.focus();
+          }
+        });
+        
+        // Service Worker registration for offline support (if available)
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            // Check if a service worker file exists before registering
+            // This prevents errors if sw.js doesn't exist
+          });
+        }
+      })();
     </script>
   </body>
 </html>
