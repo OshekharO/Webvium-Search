@@ -92,85 +92,90 @@
   </head>
   <body>
     <a href="#search" class="skip-link">Skip to search</a>
-    
+
     <header class="header">
-      <div class="logo-wrapper">
-        <img 
-          class="logo" 
-          src="https://rawcdn.githack.com/OshekharO/Web-Indexer/6655e787c1b50e58b0e8c003a23e3a620ecf46b8/img/tusky.svg" 
-          alt="Webvium Search Logo" 
-          width="180" 
-          height="180"
-          loading="eager"
+      <div class="brand">
+        <img
+          class="brand-logo"
+          src="https://rawcdn.githack.com/OshekharO/Web-Indexer/6655e787c1b50e58b0e8c003a23e3a620ecf46b8/img/tusky.svg"
+          alt=""
+          width="26"
+          height="26"
+          aria-hidden="true"
         >
-        <h1 class="visually-hidden">Webvium Search</h1>
+        <span class="brand-name">Webvium Search</span>
       </div>
+      <h1 class="visually-hidden">Webvium Search</h1>
     </header>
-    
+
     <main class="main">
+
+      <div class="clock-wrapper">
+        <time class="clock" id="clock" aria-label="Current time">--:--</time>
+        <p class="date" id="date"></p>
+      </div>
+
       <section class="search-section" aria-label="Search">
-        <div class="search-container">
-          <form 
-            id="search-form" 
-            class="search-form" 
-            method="get" 
-            action="https://www.google.com/search"
-            role="search"
-            aria-label="Web search"
-          >
-            <div class="search-box">
-              <label for="engine-select" class="visually-hidden">Select search engine</label>
-              <select id="engine-select" name="engine" aria-label="Search engine">
-                <option value="google" selected>🔍 Google</option>
-                <option value="bing">🔎 Bing</option>
-                <option value="duckduckgo">🦆 DuckDuckGo</option>
-                <option value="brave">🦁 Brave</option>
-                <option value="yahoo">📧 Yahoo</option>
-                <option value="ecosia">🌳 Ecosia</option>
-                <option value="you">🤖 You.com</option>
-                <option value="yep">✅ Yep</option>
-                <option value="webvium">🌐 Webvium</option>
-              </select>
-              
-              <div class="input-wrapper">
-                <label for="search" class="visually-hidden">Search query</label>
-                <input 
-                  id="search" 
-                  name="q" 
-                  type="search" 
-                  placeholder="Search the web..." 
-                  autocomplete="off"
-                  autocapitalize="off"
-                  autocorrect="off"
-                  spellcheck="false"
-                  aria-label="Search query"
-                  required
-                >
-                <button 
-                  type="button" 
-                  id="clear-btn" 
-                  class="clear-btn" 
-                  aria-label="Clear search"
-                  hidden
-                >
-                  ✕
-                </button>
-              </div>
-              
-              <button id="go" type="submit" aria-label="Search">
-                <span class="btn-text">Search</span>
-                <span class="btn-icon" aria-hidden="true">→</span>
-              </button>
+        <form
+          id="search-form"
+          class="search-form"
+          method="get"
+          action="https://www.google.com/search"
+          role="search"
+          aria-label="Web search"
+        >
+          <div class="search-bar">
+            <label for="engine-select" class="visually-hidden">Select search engine</label>
+            <select id="engine-select" name="engine" aria-label="Search engine">
+              <option value="google" selected>🔍 Google</option>
+              <option value="bing">🔎 Bing</option>
+              <option value="duckduckgo">🦆 DuckDuckGo</option>
+              <option value="brave">🦁 Brave</option>
+              <option value="yahoo">📧 Yahoo</option>
+              <option value="ecosia">🌳 Ecosia</option>
+              <option value="you">🤖 You.com</option>
+              <option value="yep">✅ Yep</option>
+              <option value="webvium">🌐 Webvium</option>
+            </select>
+
+            <div class="input-wrapper">
+              <label for="search" class="visually-hidden">Search query</label>
+              <input
+                id="search"
+                name="q"
+                type="search"
+                placeholder="Search the web..."
+                autocomplete="off"
+                autocapitalize="off"
+                autocorrect="off"
+                spellcheck="false"
+                aria-label="Search query"
+                required
+              >
+              <button
+                type="button"
+                id="clear-btn"
+                class="clear-btn"
+                aria-label="Clear search"
+                hidden
+              >✕</button>
             </div>
-          </form>
-          
-          <div class="keyboard-hints" aria-hidden="true">
-            <span class="hint"><kbd>Enter</kbd> to search</span>
-            <span class="hint"><kbd>/</kbd> to focus</span>
+
+            <button id="go" type="submit" aria-label="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
           </div>
+        </form>
+
+        <div class="keyboard-hints" aria-hidden="true">
+          <span class="hint"><kbd>Enter</kbd> to search</span>
+          <span class="hint"><kbd>/</kbd> to focus</span>
         </div>
       </section>
-      
+
       <section class="quick-links" aria-label="Quick links">
         <h2 class="visually-hidden">Quick Links</h2>
         <nav class="quick-links-nav">
@@ -208,46 +213,60 @@
           </a>
         </nav>
       </section>
+
     </main>
-    
+
     <footer class="footer">
-      <p class="footer-text">
-        Made with ❤️ by 
-        <a href="https://github.com/OshekharO" target="_blank" rel="noopener noreferrer">OshekharO</a>
-      </p>
-      <p class="footer-meta">
-        <span class="engine-indicator" id="current-engine" aria-live="polite">Using Google</span>
-      </p>
+      <span class="engine-indicator" id="current-engine" aria-live="polite">Using Google</span>
+      <span class="footer-sep" aria-hidden="true">·</span>
+      <span>Made with ❤️ by <a href="https://github.com/OshekharO" target="_blank" rel="noopener noreferrer">OshekharO</a></span>
     </footer>
 
     <script>
       (function() {
         'use strict';
-        
+
+        // Clock
+        const clockEl = document.getElementById('clock');
+        const dateEl  = document.getElementById('date');
+
+        const DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+        function updateClock() {
+          const now = new Date();
+          const h   = String(now.getHours()).padStart(2, '0');
+          const m   = String(now.getMinutes()).padStart(2, '0');
+          clockEl.textContent = h + ':' + m;
+          clockEl.setAttribute('datetime', now.toISOString());
+          dateEl.textContent  = DAYS[now.getDay()] + ', ' + MONTHS[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+
         // DOM Elements
-        const searchForm = document.getElementById('search-form');
-        const searchInput = document.getElementById('search');
-        const engineSelect = document.getElementById('engine-select');
-        const clearBtn = document.getElementById('clear-btn');
+        const searchForm             = document.getElementById('search-form');
+        const searchInput            = document.getElementById('search');
+        const engineSelect           = document.getElementById('engine-select');
+        const clearBtn               = document.getElementById('clear-btn');
         const currentEngineIndicator = document.getElementById('current-engine');
-        
+
         // Search engine configurations
         const searchEngines = {
-          google: { url: 'https://www.google.com/search', name: 'Google', param: 'q' },
-          bing: { url: 'https://www.bing.com/search', name: 'Bing', param: 'q' },
-          duckduckgo: { url: 'https://duckduckgo.com/', name: 'DuckDuckGo', param: 'q' },
-          brave: { url: 'https://search.brave.com/search', name: 'Brave', param: 'q' },
-          yahoo: { url: 'https://search.yahoo.com/search', name: 'Yahoo', param: 'p' },
-          ecosia: { url: 'https://www.ecosia.org/search', name: 'Ecosia', param: 'q' },
-          you: { url: 'https://you.com/search', name: 'You.com', param: 'q' },
-          yep: { url: 'https://yep.com/web', name: 'Yep', param: 'q' },
-          webvium: { url: 'https://mrepol742.github.io/search', name: 'Webvium', param: 'q' }
+          google:     { url: 'https://www.google.com/search',        name: 'Google',     param: 'q' },
+          bing:       { url: 'https://www.bing.com/search',           name: 'Bing',       param: 'q' },
+          duckduckgo: { url: 'https://duckduckgo.com/',               name: 'DuckDuckGo', param: 'q' },
+          brave:      { url: 'https://search.brave.com/search',       name: 'Brave',      param: 'q' },
+          yahoo:      { url: 'https://search.yahoo.com/search',       name: 'Yahoo',      param: 'p' },
+          ecosia:     { url: 'https://www.ecosia.org/search',         name: 'Ecosia',     param: 'q' },
+          you:        { url: 'https://you.com/search',                name: 'You.com',    param: 'q' },
+          yep:        { url: 'https://yep.com/web',                   name: 'Yep',        param: 'q' },
+          webvium:    { url: 'https://mrepol742.github.io/search',    name: 'Webvium',    param: 'q' }
         };
-        
-        // Storage key for saving preferences
+
         const STORAGE_KEY = 'webvium-search-engine';
-        
-        // Load saved search engine preference
+
         function loadPreference() {
           try {
             const saved = localStorage.getItem(STORAGE_KEY);
@@ -259,8 +278,7 @@
             // localStorage not available, ignore
           }
         }
-        
-        // Save search engine preference
+
         function savePreference(engine) {
           try {
             localStorage.setItem(STORAGE_KEY, engine);
@@ -268,89 +286,65 @@
             // localStorage not available, ignore
           }
         }
-        
-        // Update the current engine indicator
+
         function updateEngineIndicator(engine) {
           const engineData = searchEngines[engine] || searchEngines.google;
-          currentEngineIndicator.textContent = `Using ${engineData.name}`;
+          currentEngineIndicator.textContent = 'Using ' + engineData.name;
         }
-        
+
         // Handle form submission
-        searchForm.addEventListener('submit', function(event) {
+        searchForm.addEventListener('submit', function() {
           const selectedEngine = engineSelect.value;
-          const engineData = searchEngines[selectedEngine] || searchEngines.google;
-          
-          // Update form action
-          this.action = engineData.url;
-          
-          // Update input name if needed (Yahoo uses 'p' instead of 'q')
-          if (engineData.param !== 'q') {
-            searchInput.name = engineData.param;
-          } else {
-            searchInput.name = 'q';
-          }
-          
-          // Save preference
+          const engineData     = searchEngines[selectedEngine] || searchEngines.google;
+          this.action          = engineData.url;
+          searchInput.name     = engineData.param !== 'q' ? engineData.param : 'q';
           savePreference(selectedEngine);
         });
-        
+
         // Handle search engine change
         engineSelect.addEventListener('change', function() {
-          const selectedEngine = this.value;
-          updateEngineIndicator(selectedEngine);
-          savePreference(selectedEngine);
+          updateEngineIndicator(this.value);
+          savePreference(this.value);
           searchInput.focus();
         });
-        
+
         // Handle clear button visibility
         searchInput.addEventListener('input', function() {
           clearBtn.hidden = this.value.length === 0;
         });
-        
+
         // Handle clear button click
         clearBtn.addEventListener('click', function() {
           searchInput.value = '';
-          clearBtn.hidden = true;
+          clearBtn.hidden   = true;
           searchInput.focus();
         });
-        
+
         // Keyboard shortcuts
         document.addEventListener('keydown', function(event) {
-          // Press '/' to focus search (when not already in an input)
           if (event.key === '/' && document.activeElement !== searchInput && document.activeElement !== engineSelect) {
             event.preventDefault();
             searchInput.focus();
             searchInput.select();
           }
-          
-          // Escape to clear search
           if (event.key === 'Escape' && document.activeElement === searchInput) {
             if (searchInput.value) {
               searchInput.value = '';
-              clearBtn.hidden = true;
+              clearBtn.hidden   = true;
             } else {
               searchInput.blur();
             }
           }
         });
-        
+
         // Auto-focus search input on page load
         window.addEventListener('DOMContentLoaded', function() {
           loadPreference();
-          
-          // Only auto-focus if not on mobile (to avoid keyboard popup)
           if (window.innerWidth > 768) {
             searchInput.focus();
           }
         });
-        
-        // Service Worker registration for offline support (if available)
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', function() {
-            // Check if a service worker file exists before registering
-            // This prevents errors if sw.js doesn't exist
-          });
-        }
+
       })();
     </script>
   </body>
