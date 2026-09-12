@@ -233,17 +233,45 @@
         const DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
         const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
+        // Performance Optimization: Update clock only when minute changes instead of polling every 1000ms.
+        // Also skip updates if tab is in background, re-syncing on visibilitychange.
+        let timerId = null;
+        let lastTimeStr = '';
+        let lastDateStr = '';
+
         function updateClock() {
           const now = new Date();
-          const h   = String(now.getHours()).padStart(2, '0');
-          const m   = String(now.getMinutes()).padStart(2, '0');
-          clockEl.textContent = h + ':' + m;
-          clockEl.setAttribute('datetime', now.toISOString());
-          dateEl.textContent  = DAYS[now.getDay()] + ', ' + MONTHS[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+          const h = String(now.getHours()).padStart(2, '0');
+          const m = String(now.getMinutes()).padStart(2, '0');
+          const timeStr = h + ':' + m;
+          const dateStr = DAYS[now.getDay()] + ', ' + MONTHS[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+
+          if (timeStr !== lastTimeStr) {
+            clockEl.textContent = timeStr;
+            clockEl.setAttribute('datetime', now.toISOString());
+            lastTimeStr = timeStr;
+          }
+
+          if (dateStr !== lastDateStr) {
+            dateEl.textContent = dateStr;
+            lastDateStr = dateStr;
+          }
+
+          // Schedule next update precisely at the beginning of the next minute
+          if (timerId) clearTimeout(timerId);
+          if (!document.hidden) {
+            const delay = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+            timerId = setTimeout(updateClock, delay);
+          }
         }
 
         updateClock();
-        setInterval(updateClock, 1000);
+
+        document.addEventListener('visibilitychange', function() {
+          if (!document.hidden) {
+            updateClock();
+          }
+        });
 
         // DOM Elements
         const searchForm             = document.getElementById('search-form');
